@@ -10,9 +10,28 @@ namespace algorytm_EDF
 {
     public partial class Form_dodaj_zadanie : Form
     {
+        public int deadline=-1;
+        public int czas=-1;
         public Form_dodaj_zadanie()
         {
             InitializeComponent();
+            
+        }
+
+        private void dodaj_Click(object sender, EventArgs e)
+        {
+            deadline=Convert.ToInt32(numericUpDown1.Value);
+            czas = Convert.ToInt32(numericUpDown2.Value);
+        }
+
+        private void Zamknij_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Form_dodaj_zadanie_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
