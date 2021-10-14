@@ -22,6 +22,15 @@ namespace algorytm_EDF
         {
             deadline=Convert.ToInt32(numericUpDown1.Value);
             czas = Convert.ToInt32(numericUpDown2.Value);
+            if(deadline<czas)
+            {
+                MessageBox.Show("Czas wykonania zadania jest wiekszy niz jego deadline!!!", "Blad",MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else 
+            {
+                this.Close();
+            }
+            
         }
 
         private void Zamknij_Click(object sender, EventArgs e)
