@@ -42,5 +42,20 @@ namespace algorytm_EDF
         {
 
         }
+
+        private void losuj_Click(object sender, EventArgs e)
+        {
+            Random losowana = new Random();
+            int wylosowany_deadline = 0;
+            int wylosowany_czas = 0;
+            do
+            {
+                wylosowany_deadline = losowana.Next(1, 100);
+                wylosowany_czas = losowana.Next(1, 100);
+            }
+            while (wylosowany_czas > wylosowany_deadline);
+            numericUpDown1.Value = wylosowany_deadline;
+            numericUpDown2.Value = wylosowany_czas;
+        }
     }
 }
