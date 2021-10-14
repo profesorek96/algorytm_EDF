@@ -17,5 +17,14 @@ namespace algorytm_EDF
             InitializeComponent();
         }
 
+        private void dodaj_zadanie_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void generuj_zadanie_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
