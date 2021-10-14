@@ -19,7 +19,8 @@ namespace algorytm_EDF
 
         private void dodaj_zadanie_Click(object sender, EventArgs e)
         {
-
+            Zadanie a = new Zadanie(4, 19);
+            MessageBox.Show(a.ToString());
         }
 
         private void generuj_zadanie_Click(object sender, EventArgs e)
