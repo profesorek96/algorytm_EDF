@@ -44,8 +44,9 @@ namespace algorytm_EDF
             {
                 zadania_list.Items.Add(zadania[i]);
             }
-            Wykres wykres = new Wykres();
+            Wykres wykres = new Wykres(zadania, Convert.ToInt32(numericUpDown1.Value));    
             wykres.ShowDialog();
+            
         }
 
         private void czysc_liste_Click(object sender, EventArgs e)

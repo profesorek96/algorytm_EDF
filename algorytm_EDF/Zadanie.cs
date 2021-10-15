@@ -4,7 +4,7 @@ using System.Text;
 
 namespace algorytm_EDF
 {
-    class Zadanie:IComparable
+    public class Zadanie:IComparable
     {
         public int id;
         public int deadline;
