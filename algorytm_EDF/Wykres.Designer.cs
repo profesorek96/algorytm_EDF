@@ -29,11 +29,13 @@ namespace algorytm_EDF
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dodaj_task = new System.Windows.Forms.Button();
             this.stop_sim = new System.Windows.Forms.Button();
             this.start_sim = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,6 +46,7 @@ namespace algorytm_EDF
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 374);
             this.panel1.TabIndex = 0;
+            this.panel1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.panel1_Scroll);
             // 
             // panel2
             // 
@@ -88,6 +91,11 @@ namespace algorytm_EDF
             this.start_sim.UseVisualStyleBackColor = false;
             this.start_sim.Click += new System.EventHandler(this.start_sim_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Wykres
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -109,5 +117,6 @@ namespace algorytm_EDF
         private System.Windows.Forms.Button start_sim;
         private System.Windows.Forms.Button dodaj_task;
         private System.Windows.Forms.Button stop_sim;
+        private System.Windows.Forms.Timer timer1;
     }
 }

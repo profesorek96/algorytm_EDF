@@ -9,11 +9,21 @@ namespace algorytm_EDF
         public int id;
         public int deadline;
         public int czas_wykonania;
+        public int kolor;
         public Zadanie(int id,int deadline,int czas)
         {
             this.id = id;
             this.deadline = deadline;
             this.czas_wykonania = czas;
+            Random losowa = new Random();
+            kolor = losowa.Next(0, 7);
+        }
+        public Zadanie(Zadanie tmp)
+        {
+            this.id = tmp.id;
+            this.deadline = tmp.deadline;
+            this.czas_wykonania = tmp.czas_wykonania;
+            this.kolor = tmp.kolor;
         }
 
         public int CompareTo(object obj)
